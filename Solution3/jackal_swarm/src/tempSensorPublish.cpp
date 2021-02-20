@@ -20,7 +20,7 @@ int main(int argc, char **argv){
   while (ros::ok())
   {
     //read temperature data from a file
-    ifstream temp("/home/sivaranjani/Desktop/temperatureActual.csv");
+    ifstream temp("/home/sivaranjani/jackal_navigation/src/jackal_swarm/iofiles/temperatureActual.csv");
     if(!temp.is_open()) std::cout << "File not opened"<< '\n';
     int i;
     string val;

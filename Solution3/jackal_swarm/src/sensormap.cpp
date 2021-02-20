@@ -75,7 +75,7 @@ int main(int argc, char **argv)
   }
   //write data to a file
   std::ofstream measuredTemperature;
-  measuredTemperature.open("/home/sivaranjani/Desktop/MeasuredTemperature.csv");
+  measuredTemperature.open("/home/sivaranjani/jackal_navigation/src/jackal_swarm/iofiles/MeasuredTemperature.csv");
   for(int i=0; i<100; i++)
   {
     measuredTemperature << temperatureObserved[i] << '\n';
