@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find localisation_gpu_odom_ins)/launch/custom_mapserver.launch" />
+    <include file="$(find localisation_gpu_odom_ins)/launch/custom_navsat_transform.launch" />
+    <include file="$(find localisation_gpu_odom_ins)/launch/custom_ekf_localisation.launch" />
+</launch>
+

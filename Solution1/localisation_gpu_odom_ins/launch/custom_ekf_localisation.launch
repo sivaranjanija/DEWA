@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localisation_gps_odom_imu">
+        <rosparam command="load" file="$(find localisation_gpu_odom_ins)/config/localisation_gpu_odom_ins.yaml" />
+    </node>
+
+</launch>
