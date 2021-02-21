@@ -13,9 +13,11 @@ catkin_make
 source devel/setup.bash 
 ```
 
-## <a href="usage"/>Usage
+## <a href="usage"/>Steps to Follow
 
-Please run the launch as follows:
+- run the [TemperatureGradient.ipynb](TemperatureGradient.ipynb) to generate temperatureActual.csv and place in [iofiles](jackal_swarm/iofiles)
+
+- Please run the launch as follows:
 
 ```bash
 roslaunch jackal_swarm jackal_measure_temperature.launch
