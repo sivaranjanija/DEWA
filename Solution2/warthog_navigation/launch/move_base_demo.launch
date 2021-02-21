@@ -1,0 +1,11 @@
+<launch>
+  <!--arg name="map_file" default="$(find warthog_navigation)/maps/map.yaml" /-->
+    <!--node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" /-->
+ 
+  <include file="$(find warthog_navigation)/launch/move_base.launch">
+    <arg name="no_static_map" value="true"/>
+  </include>
+  
+
+</launch>
+

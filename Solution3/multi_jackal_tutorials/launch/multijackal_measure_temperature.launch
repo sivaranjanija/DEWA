@@ -1,0 +1,19 @@
+<launch>
+  <!-- Launch move_base -->
+  <include file="$(find multi_jackal_tutorials)/launch/six_jackal.launch">
+    <arg name="rviz" value="true"/>
+  </include>
+
+  <!-- Create temperature sensor map and publish on a topic-->
+  <node name="multisensormap" pkg="multi_jackal_tutorials" type="multisensormap"/>
+
+  <!-- Measure actual temperature as the robot moves-->
+  <node name="temperatureActual" pkg="jackal_swarm" type="temperatureActual"/>
+
+  <!-- Move the robot through goals -->
+  <node name="waypointmultiRobot1" pkg="multi_jackal_tutorials" type="waypointmultiRobot1"/>
+
+</launch>
+
+
+

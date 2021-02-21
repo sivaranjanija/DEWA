@@ -1,0 +1,30 @@
+<launch>
+
+  <!-- Launch Jackal in Gazebo with specified world -->
+  <include file="$(find jackal_gazebo)/launch/jackal_world.launch">
+    <arg name="config" value="front_laser"/>
+  </include>
+
+  <!-- Launch amcl with map -->
+  <include file="$(find jackal_navigation)/launch/amcl_demo.launch">
+    <arg name="map_file" value="$(find jackal_swarm)/maps/map.yaml"/>
+  </include>
+
+  <!-- Launch move_base -->
+  <include file="$(find jackal_navigation)/launch/odom_navigation_demo.launch"/>
+
+  <!-- Launch rviz -->
+  <include file="$(find jackal_viz)/launch/view_robot.launch">
+    <arg name="config" value="localization"/>
+  </include>
+
+  <!-- Create temperature sensor map and publish on a topic-->
+  <node name="sensormap" pkg="jackal_swarm" type="sensormap"/>
+
+  <!-- Measure actual temperature as the robot moves-->
+  <node name="temperatureActual" pkg="jackal_swarm" type="temperatureActual"/>
+
+  <!-- Move the robot through goals -->
+  <node name="waypointRobot1" pkg="jackal_swarm" type="waypointRobot1"/>
+
+</launch>

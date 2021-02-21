@@ -1,0 +1,15 @@
+<launch>
+
+  <!-- Launch warthog in Gazebo with specified world -->
+  <include file="$(find warthog_gazebo)/launch/empty_world.launch"/>
+    
+  <!-- Launch rviz -->
+  <node name="rviz" pkg="rviz" type="rviz"/>
+
+  <!-- Launch move_base -->
+  <include file="$(find warthog_navigation)/launch/move_base_demo.launch"/>
+
+  <!-- Move the robot through specified waypoints -->
+  <!--node name="warthog_navigation" pkg="warthog_navigation" type="warthog_navigation"/-->
+
+</launch>
