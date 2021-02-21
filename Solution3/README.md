@@ -13,7 +13,7 @@ catkin_make
 source devel/setup.bash 
 ```
 
-## <a href="usage"/>Steps to Follow
+## Steps to Follow
 
 - run the [TemperatureGradient.ipynb](TemperatureGradient.ipynb) to generate temperatureActual.csv and place in [iofiles](jackal_swarm/iofiles)
 

@@ -13,7 +13,7 @@ catkin_make
 source devel/setup.bash 
 ```
 
-## <a href="usage"/>Usage
+## Usage
 
 Please run the launch as follows:
 
