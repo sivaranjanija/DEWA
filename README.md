@@ -1,17 +1,17 @@
 # DEWA Submission
 
-## Solution1
+## [Solution1](Solution1)
 
 - [localisation package](Solution1/localisation_gpu_odom_ins)
 - kalman_filter.cpp, extended_kalman_filter.cpp [custom ekf formulation](Solution1) In-progress
 
-## Solution2
+## [Solution2](Solution2)
 
 - [warthog_navigation package](Solution2/warthog_navigation)
 ![Demo](Solution2/demo2.gif)
 [Video link](https://youtu.be/JvXPHFNZv8E)
 
-## Solution3
+## [Solution3](Solution3]
 
 - Input [TemperatureGradient.ipynb](Solution3/TemperatureGradient.ipynb)
 
@@ -27,6 +27,6 @@
 
 Output [RecoveredHeatMap.ipynb](Solution3/RecoveredHeatMap.ipynb)
 
-## Solution4
+## [Solution4](Solution4)
 
 [Machine Learning](Solution4/DEWA_Solution4.ipynb)
