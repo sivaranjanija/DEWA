@@ -41,7 +41,7 @@ catkin_make
 source devel/setup.bash
 ```
 
-- Please run the follwing in individual terminal, sourcing devel/setup.bash, The created launch file crashes for now, which I am debugging, therefore please run these individually for now:
+- Please run the following in individual terminal, sourcing devel/setup.bash, The created launch file carrying out all these [jackal_measure_temperature.launch](jackal_swarm/jackal_measure_temperature.launch)crashes for now, which I am debugging, therefore please run these individually for now:
 
 ```bash
 roslaunch jackal_gazebo jackal_world.launch config:=front_laser
@@ -53,12 +53,13 @@ rosrun jackal_swarm temperatureActual
 rosrun jackal_swarm waypointRobot1
 
 ```
-Please wait for the jackal to scan the entire map, only then the recovered heat map will be populated completely, otherwise the temperature for only those cells where the jackal travelled will be there.You can see the generated MeasuredTemperature.csv file in [iofiles](jackal_swarm/iofiles)
+Please wait for the jackal to scan the entire 10*10 map, only then the recovered heat map will be populated completely, otherwise the temperature for only those cells where the jackal travelled will be there.You can see the generated MeasuredTemperature.csv file in [iofiles](jackal_swarm/iofiles)
 
 - run the [RecoveredHeatMap.ipynb](RecoveredHeatMap.ipynb) to view the recovered heatmap from the Jackal generated MeasuredTemperature.csv file in [iofiles](jackal_swarm/iofiles)
 
 Please refer the [video](https://youtu.be/a0N091pNz5k) demonstrating successful build
 
+- Please run the following in individual terminal, sourcing devel/setup.bash
 ```bash
 roslaunch multi_jackal_tutorials six_jackal.launch rviz:=true
 rosrun multi_jackal_tutorials waypointmultiRobot1
