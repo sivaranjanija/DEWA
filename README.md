@@ -11,7 +11,7 @@
 ![Demo](Solution2/demo2.gif)
 [Video link](https://youtu.be/JvXPHFNZv8E)
 
-## [Solution3](Solution3]
+## [Solution3](Solution3)
 
 - Input [TemperatureGradient.ipynb](Solution3/TemperatureGradient.ipynb)
 
