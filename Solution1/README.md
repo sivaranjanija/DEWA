@@ -3,6 +3,8 @@
 
 ## Steps to build and run the solution
 
+### Part 1
+
 Please refer the [build process video](https://youtu.be/vNdZsEwVvc4) of the successful build.
 
 Please make sure that ros-kinetic is installed and is sourced in ~/.bashrc as source /opt/ros/kinetic/setup.bash
@@ -35,3 +37,7 @@ Filtered output in another terminal
 rostopic echo /odometry/filtered
 
 ```
+
+### Part 2
+
+Please refer the [customEKF](customEKF) in-progress for the Extended Kalman Filter
