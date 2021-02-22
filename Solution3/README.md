@@ -20,7 +20,7 @@ Please watch the full demo [here](https://youtu.be/N3_2EN2Z1rM).
 
 - A map of 100 meters squared is created and placed in [maps](jackal_swarm/maps). 
 
-Please refer the [video](https://youtu.be/ZSHBrxv4ASo) demonstrating successful build
+Please refer the [video](https://youtu.be/1VrOWcbaLtk) demonstrating successful build
 
 Please make sure that ros-kinetic is installed and is sourced in ~/.bashrc as source /opt/ros/kinetic/setup.bash
 
@@ -41,18 +41,17 @@ catkin_make
 source devel/setup.bash
 ```
 
-- Please run the following in individual terminal, sourcing devel/setup.bash, The created launch file carrying out all these [jackal_measure_temperature.launch](jackal_swarm/jackal_measure_temperature.launch)crashes for now, which I am debugging, therefore please run these individually for now:
+- Please run the following in individual terminal, sourcing devel/setup.bash.
 
 ```bash
 roslaunch jackal_gazebo jackal_world.launch config:=front_laser
-roslaunch jackal_navigation amcl_demo.launch map_file:=path_to/map.yaml
-roslaunch jackal_navigation odom_navigation_demo.launch 
-roslaunch jackal_viz view_robot.launch config:=localization
-rosrun jackal_swarm sensormap
-rosrun jackal_swarm temperatureActual
-rosrun jackal_swarm waypointRobot1
 
 ```
+```bash
+roslaunch jackal_swarm jackal_measure_temperature.launch
+
+```
+
 Please wait for the jackal to scan the entire 10*10 map, only then the recovered heat map will be populated completely, otherwise the temperature for only those cells where the jackal travelled will be there.You can see the generated MeasuredTemperature.csv file in [iofiles](jackal_swarm/iofiles)
 
 - run the [RecoveredHeatMap.ipynb](RecoveredHeatMap.ipynb) to view the recovered heatmap from the Jackal generated MeasuredTemperature.csv file in [iofiles](jackal_swarm/iofiles)

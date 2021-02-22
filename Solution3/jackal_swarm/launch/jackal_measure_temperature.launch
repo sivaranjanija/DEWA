@@ -1,11 +1,6 @@
 <launch>
 
-  <!-- Launch Jackal in Gazebo with specified world -->
-  <include file="$(find jackal_gazebo)/launch/jackal_world.launch">
-    <arg name="config" value="front_laser"/>
-  </include>
-
-  <!-- Launch amcl with map -->
+   <!-- Launch amcl with map -->
   <include file="$(find jackal_navigation)/launch/amcl_demo.launch">
     <arg name="map_file" value="$(find jackal_swarm)/maps/map.yaml"/>
   </include>
