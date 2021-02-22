@@ -1,0 +1,19 @@
+<launch>
+<arg name="config" default="base" />
+  <!-- fix for oneweek project -->
+  <arg name="env_runner" value="$(eval 'env_run' if not optenv('OS', 'unknown').lower().startswith('windows') else 'env_run.bat')" />
+  <param name="robot_description"
+         command="$(find jackal_description)/scripts/$(arg env_runner)
+                    $(find jackal_description)/urdf/configs/$(arg config)
+                    $(find xacro)/xacro $(find jackal_description)/urdf/jackal.urdf.xacro
+                    --inorder" />
+
+  <group ns="robot1">
+    <param name="tf_prefix" value="robot1_tf" />
+    <include file="$(find multi_jackal_simulator)/launch/single_jackal.launch">
+      <arg name="init_pose" value="-x 3 -y 1 -z 0" />
+      <arg name="robot_name" value="Robot1"/>
+    </include>
+  </group>
+
+</launch>

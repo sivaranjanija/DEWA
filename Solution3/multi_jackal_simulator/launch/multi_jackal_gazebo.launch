@@ -1,0 +1,8 @@
+<launch>
+  <!-- Start Gazebo. -->
+  <include file="$(find multi_jackal_simulator)/launch/jackal_world.launch">
+    <arg name="use_sim_time" value="true"/>
+    <arg name="config"    default="front_laser"/>
+  </include>
+  <include file="$(find multi_jackal_simulator)/launch/multi_robots.launch"/>
+</launch>

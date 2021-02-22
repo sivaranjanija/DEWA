@@ -1,0 +1,21 @@
+<launch>
+  <arg name="ns"        default="jackal0"/>
+  <arg name="config"    default="base"/>
+  <arg name="config_id" default="0"/>
+  <arg name="gui"       default="false"/>
+
+  <!-- Start Gazebo. -->
+  <include file="$(find multi_jackal_simulator)/launch/jackal_world.launch">
+    <arg name="use_sim_time" value="true"/>
+    <arg name="config"    default="front_laser"/>
+  </include>
+
+  <!-- Spawn the robot. -->
+  <include file="$(find multi_jackal_simulator)/launch/jackal_base.launch">
+    <arg name="ns"            value="$(arg ns)"/>
+    <arg name="config"        value="$(arg config)"/>
+    <arg name="config_id"     value="$(arg config_id)"/>
+    <arg name="use_move_base" value="true"/>
+  </include>
+ 	
+</launch>
