@@ -44,6 +44,7 @@ source devel/setup.bash
 - Please run the following in individual terminal, sourcing devel/setup.bash.
 
 ```bash
+sudo apt-get install ros-kinetic-jackal-desktop 
 roslaunch jackal_gazebo jackal_world.launch config:=front_laser
 
 ```
